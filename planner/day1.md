@@ -47,11 +47,11 @@ Set up the project and implement the core UI components: Desktop, Taskbar, Start
   ```
 
 ### 2. Global State Management (1 hour)
-- [ ] Create app context for managing global state
+- [x] Create app context for managing global state
   ```
   src/contexts/AppContext.tsx
   ```
-- [ ] Set up initial state including:
+- [x] Set up initial state including:
   - Active windows
   - Running applications
   - Start menu visibility
