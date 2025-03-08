@@ -6,22 +6,41 @@ Set up the project and implement the core UI components: Desktop, Taskbar, Start
 ## Tasks
 
 ### 1. Project Setup (2 hours)
-- [ ] Initialize a new Vite project with React and TypeScript
+- [x] Initialize a new Vite project with React and TypeScript
   ```bash
   yarn create vite browser-os --template react-ts
   cd browser-os
   ```
-- [ ] Install core dependencies
+- [x] Install core dependencies
   ```bash
   yarn add framer-motion react-rnd tailwindcss
   yarn add @types/node -D
   ```
-- [ ] Set up Tailwind CSS
+- [x] Set up Tailwind CSS
   ```bash
-  yarn add -D tailwindcss postcss autoprefixer
-  npx tailwindcss init -p
+  ~~yarn add -D tailwindcss postcss autoprefixer~~
+  ~~npx tailwindcss init -p~~
+  yarn add tailwindcss @tailwindcss/vite
   ```
-- [ ] Configure project structure
+- [x] Cofigure vite plugin
+  ```vite.config.ts
+  import { defineConfig } from 'vite'
+  import tailwindcss from '@tailwindcss/vite'
+  export default defineConfig({
+   plugins: [
+    tailwindcss(),
+   ],
+  })
+  ```
+- [x] Setup css 
+  ```css
+    @import "tailwindcss";
+  ```
+- [x] Import tailwind
+  ```index.html
+    <link rel="stylesheet" href="/src/index.css" /> 
+  ```
+- [x] Configure project structure
   ```bash
   mkdir -p src/components/Desktop src/components/Taskbar src/components/StartMenu src/components/Clock
   mkdir -p src/hooks src/contexts src/utils src/workers src/types
